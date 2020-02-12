@@ -4,7 +4,7 @@ date: 2020-02-11T20:37:28-07:00
 draft: false
 ---
 
-![me as a youngster](me.jpg "Portrait of the artist as a young man")
+{{< figure src="me.jpg" title="Me" >}}
 
 Hello, my name is Dylan Thomas. I've have a varied and interesting career in technology which all began on Sun workstations while studying geography. Yes, I'm a geographer by training, getting my BSc. in Human and Physical Geography at the [University of Reading](http://www.reading.ac.uk/ges/) (say "Redding" not "Reeding") in England. I moved the the United States from my native England many years ago and then got my MA in Geography at the University of North Carolina at Charlotte (UNCC).
 
