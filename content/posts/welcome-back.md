@@ -1,7 +1,7 @@
 ---
 title: "Welcome Back"
 date: 2020-02-11T20:11:30-07:00
-draft: true
+draft: false
 ---
 
 ## After a long pause

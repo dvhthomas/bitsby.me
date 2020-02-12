@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2020-02-11T20:37:28-07:00
-draft: true
+draft: false
 ---
 
 ![me as a youngster](me.jpg "Portrait of the artist as a young man")
