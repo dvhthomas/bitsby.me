@@ -171,6 +171,6 @@ while read row; do
 done <$ACCOUNT_PROJECTS
 {{</ highlight >}}
 
-Probably the only thing worth calling out that is new is the `getProjectId` function. There's a(n un)suprising number of answers on StackOverflow about how to pull a specific 'column' or field out of a CSV file. You probably immediately thought of [`cut`](https://linux.die.net/man/1/cut) with various options; me too. But getting that to function on a single string vs. a line from a file led to a lot of gymnastics in approach. Instead I went with the elegant solution proposed [here](https://stackoverflow.com/a/19482148/3074) which did the trip nicely.
+Probably the only thing worth calling out that is new is the `getProjectId` function. There's a(n un)suprising number of answers on StackOverflow about how to pull a specific 'column' or field out of a CSV file. You probably immediately thought of [`cut`](https://linux.die.net/man/1/cut) with various options; me too. But getting that to function on a single string vs. a line from a file led to a lot of gymnastics in approach. Instead I went with the elegant solution proposed [here](https://stackoverflow.com/a/19482148/3074) which did the trick nicely.
 
 So there you have it: a few new tidbits to learn, and a couple of csv files that are ready on a monthly cron basis to enrich customer bills via the Cloud Billing API.
