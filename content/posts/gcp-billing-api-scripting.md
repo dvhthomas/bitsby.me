@@ -1,9 +1,9 @@
 ---
-title: "GCP Billing Api Scripting"
+title: "GCP Billing API Scripting"
 date: 2020-02-12T13:29:23-07:00
 tags: [gcp, shell-scripting]
-summary: ""
-draft: true
+summary: "Using the Google Cloud Platform billing API for (a bit of fun) and profit"
+draft: false
 ---
 
 ## Getting an invoice out the door
