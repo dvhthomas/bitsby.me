@@ -1,6 +1,6 @@
 ---
 title: "Core Skills >= Technical Skills"
-date: 2020-02-12T19:49:24-07:00
+date: 2019-01-29T19:49:24-07:00
 tags: [leadership]
 draft: false
 summary: "Reposting a popular article of mine from LinkedIn, I muse over the relative benefits of technical skills over core skills in hiring. And by _'muse'_, I mean predictably mean I _'express a strong opinion that I'm right'_"
