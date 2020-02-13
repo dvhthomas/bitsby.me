@@ -36,4 +36,5 @@ enableRobotsTXT = true
 [markup]
   [markup.highlight]
     lineNos = true
+    lineNumbersInTable = false
     style = "dracula"
