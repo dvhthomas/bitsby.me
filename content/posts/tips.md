@@ -23,3 +23,12 @@ Or a specific link in a page. This uses the fact that markdown adds an automatic
 ## A gist on Github
 
 {{< gist dvhthomas 239909 >}}
+
+## Code snippet
+
+Note the highlighted lines:
+
+{{< highlight bash "hl_lines=1" >}}
+$ echo "hello world"
+hello world
+{{</ highlight>}}
