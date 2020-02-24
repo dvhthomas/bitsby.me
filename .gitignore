@@ -10,3 +10,10 @@ $RECYCLE.BIN/
 
 # OSX
 .DS_Store
+
+# Dev-specific Env and configs
+.venv
+.ipynb_checkpoints
+.vscode
+notebooks/*.*
+!notebooks/*.ipynb

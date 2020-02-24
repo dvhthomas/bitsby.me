@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>Daily Obstruction File Map</title>
+    <script src="https://unpkg.com/deck.gl@^7.0.0/dist.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+
+    <style type="text/css">
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+      #tooltip:empty {
+        display: none;
+      }
+      #tooltip {
+        font-family: Helvetica, Arial, sans-serif;
+        position: absolute;
+        padding: 4px;
+        margin: 8px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        max-width: 300px;
+        font-size: 10px;
+        z-index: 9;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="tooltip"></div>
+  </body>
+
+  <script type="text/javascript">
+
+    const {DeckGL, HexagonLayer, ColumnLayer} = deck;
+
+    /* Switch which file you're viewing if you need something that doesn't hog
+       your entire computer memory!
+    */
+    //let file = '../data/mn.geojson';
+    let file = '../data/dof.geojson';
+
+    const heatmap = new HexagonLayer({
+        id: 'hex-layer',
+        data: file,
+        dataTransform: data => {return data.features},
+        colorDomain: [1,10,50,100,200],
+        extruded: false,
+        getPosition: f => f.geometry.coordinates,
+        coverage: 0.95
+    });
+
+    const columns = new ColumnLayer({
+        id: 'dof',
+        data: file,
+        // GeoJSON includes an array of 'features'.
+        // https://github.com/uber/deck.gl/blob/master/docs/api-reference/layer.md#datatransform-function-optional
+        dataTransform: data => {return data.features},
+        radius: 50,
+        elevationScale: 2,
+        getPosition: f => f.geometry.coordinates,
+        getElevation: f => f.properties.AGL,
+        getFillColor: d => [48, 128, 255, 255],
+        onHover: updateTooltip
+    });
+    
+
+    new DeckGL({
+      mapboxApiAccessToken: 'YOUR_KEY',
+      mapStyle: 'mapbox://styles/mapbox/light-v9',
+      latitude: 42.7,
+      longitude: -71.8,
+      zoom: 9,
+      maxZoom: 16,
+      pitch: 45,
+      layers: [heatmap, columns]
+    });
+
+    function updateTooltip({x, y, object}) {
+      const tooltip = document.getElementById('tooltip');
+
+      if (object) {
+        tooltip.style.top = `${y}px`;
+        tooltip.style.left = `${x}px`;
+        tooltip.innerHTML = `
+    <div><b>Obstruction Info &nbsp;</b></div>
+    <div><b>Elevation AGL and MSL</b></div>
+    <div><div>${object.properties.AGL} / ${object.properties.AMSL}</div></div>
+    <div><b>Type</b></div>
+    <div>${object.properties.TYPE}</div>
+    <div><b>Lighting</b></div>
+    <div>${object.properties.LIGHTING}</div>
+    `;
+      } else { 
+        tooltip.innerHTML = '';
+      }
+    }
+
+  </script>
+</html>
