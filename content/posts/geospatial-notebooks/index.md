@@ -9,17 +9,17 @@ draft: false
 
 ## Modern for exploration and analysis
 
-'_The modern geospatial stack_' isn't really a helpful thing to say when trying to describe a whole field. But it mostly means _'not a typical commercial package'_. At least that's my take. It means thinking about geospatial analysis as more like a slightly specialized case of typical data science, inlcuding such libraries as the Pythonic `numpy`.
+'_The modern geospatial stack_' isn't really a helpful thing to say when trying to describe a whole field. But it mostly means _'not a typical commercial package'_. At least that's my take. It means thinking about geospatial analysis as more like a slightly specialized case of typical data science, and that means a assembling a toolkit from thee array of open source and commerical tools out there.
 
-I've been wanting to dip my toe in this arena for a while. Rather than learn in isolation, I decided to poke at a small question that came up at work: how can we more easily pull data from the U.S. Federal Aviation Administration to understand and visualize ground-based obstruction in airspace.
+I've been wanting to dip my toe in this arena for a while, and getting back to [Woolpert](https://www.woolpert.com) has afforded me that opportunity. Rather than learn in isolation, I decided to poke at a small question that came up at work, namely: how can one more easily source data from the U.S. Federal Aviation Administration to understand and visualize ground-based obstruction in airspace.
 
-Said another way: show me things that aircraft can collide with as they're taking off, landing, or otherwise flying really low.
+Said another way: show me things that aircraft can collide with as they're taking off, landing, or otherwise flying really low. And depending on your background, that may sound very odd, or incredibly useful.
 
 ## Reproducible Experiments
 
-Something that I personally like about the toolkit for data science and data exploration is that it can be self-documenting and reproducible. If you can't get the same results each time you run a deterministic set of steps, then something is not working correctly.
+Something that I personally like about the toolkit for data science and data exploration is that it _can_ be self-documenting and reproducible. If you can't get the same results each time you run a deterministic set of steps, then something is not working correctly.
 
-The exception is when either the underlying data are changing, or the algorithm is evolving. But excepting those cases, there's something really nice about being able to read--literally from top to bottom--the exact steps that were needed to get from point A (hypothesis or generalized goal) to point B (an answer that is a reproducible).
+The exception is when either the underlying data are changing, or the algorithm is evolving. But excepting those cases, there's something really nice about being able to read--literally from top to bottom--the exact steps that were needed to get from point A (hypothesis or generalized goal) to point B (an answer that is a reproducible). It's like a re-runnable version of the old fashioned lab book. And it's no mistake that 'notebook' has become the noun-of-the-day in data science.
 
 The tooling for this has evolved over time. My own personal journey has led me from macros inside GIS tools, to shell scripts that string together various input-output operations (like 'convert this data', 'summary it using an open source library', etc.), up to today where I'm mostly using Jupyter Notebooks.
 
@@ -27,7 +27,7 @@ The tooling for this has evolved over time. My own personal journey has led me f
 
 Jupyter used to be an exclusively Python-centric environment for documenting 'lab experiments'. Indeed, the core is still seen in the UI and documentation as IPython (interactive Python, I think?), and using Python package management tools remains a common way to get up and running. However, Jupyter now extends beyond Python.
 
-Here's how I typically get up and running:
+Here's how I typically get up and running. And you will notice that it's all rather command-line-y and not point-and-clicky. That may turn you off but it does make things very reproducible:
 
 {{<highlight bash "hl_lines=6-7">}}
 mkdir experiment-one
@@ -48,11 +48,11 @@ There are two cells. One is markdown and the second is Python. You can also writ
 
 ## It's Python (most) of the way down
 
-Having said the Jupyter notebooks are multi-lingual, the geospatial toolkit is overwhelmingly Python-based, with workhorse native (C, C++) libraries having excellent Python bindings.
+Having said that Jupyter notebooks are multi-lingual, the geospatial toolkit is overwhelmingly Python-based, with workhorse native (C, C++) libraries like GDAL and PROJ having excellent Python bindings like rasterio for GDAL.
 
-Couple that with the fact that data science toolkits themselves are predominantly Python--with libraries like `numpy` and `pandas` leading the way--I've been exclusively using Python for my experimentation and learning.
+Couple that with the fact that data science toolkits themselves are predominantly Python--with libraries like `numpy` and `pandas` leading the way--I've been exclusively using Python for my experimentation and learning. If you're an R fan or MatLab devotee I'm sure there are _plenty_ of libraries in your ecosystem too...it's just not where I hang out because of the geo-centric nature of my work.
 
-For those libraries that aren't just a `pip install ...` you still need to know your `make build...` approach to software installation. I'm on a Mac most of the time so I tend to use homebrew instead, e.g., `brew install spatialindex` to get libspatialindex installed. But the rest of the time I'm using `pip`.
+It's not all roses: for those libraries that aren't just a `pip install ...` you still need to know your `make build...` approach to software installation. I'm on a Mac most of the time so I tend to use homebrew instead, e.g., `brew install spatialindex` to get libspatialindex installed. But the rest of the time I'm using `pip`.
 
 ### Not entirely Python
 
@@ -74,15 +74,15 @@ The format of a notebook (*.ipynb) file is not Python, then. But it does provide
   },
 {{</highlight>}}
 
-It's a mix of structure content in what looks like a JSON format, with presentational decorations like the `"\n"` for new lines.
+It's a mixture of content types saved in what looks like a JSON format; for example, look at the presentational decorations like the `"\n"` for new lines.
 
-I _strongly_ recommend just using the browser-based editor or something like the Visual Studio Code Python extension by Microsoft that provides a nice integrated experience (I use both).
+I _strongly_ recommend just using the browser-based editor or something like the Visual Studio Code Python extension by Microsoft that provides a nice integrated experience (I use both). But it's good to know that there's no magic here. Just text.
 
 ## Getting something done
 
 Back to the matter at hand. I want to:
 
-1. Download some data from a government website.
+1. Download some data from a government website (FAA).
 1. Take a look at it so I understand the structure.
 1. Geo-enable it so that I can see the spatial distribution.
 1. Export the data into a common geospatial format.
@@ -92,7 +92,7 @@ To do that I'll write a Jupyter Notebook to access, validate, and export the dat
 
 ### Using Geopandas
 
-First up, I installed geopandas. This is the geo-aware extension to the ubiquitous and gobsmackingly amazing pandas library. If there's a multi-tool or Swiss Army knife of data analysis in Python, it's pandas (which itself builds on numpy and others). Or maybe pandas is the big blade in the pocket knife? The point is, it's _sharp_ and versatile.
+First up, I installed `geopandas`. This is the geo-aware extension to the ubiquitous and amazing pandas library. If there's a multi-tool or Swiss Army knife of data analysis in Python, it's pandas (which itself builds on numpy and others). Or maybe pandas is the big blade in the pocket knife? The point is, it's _sharp_ and versatile.
 
 Geopandas extends the data types, predicates, visualization with map stuff. Let's take a look at the very first code cell:
 
@@ -145,7 +145,7 @@ It's just the STDOUT from my shell. Neat!
 
 ### Import and preview data
 
-Finally, we get to use geopandas. Using the `read_csv` function pulls the CSV file into a native pandas `Dataframe` structure. Then the `shape` function prints out the data schema.
+Finally, we get to use geopandas. Using the `read_csv` function pulls the CSV file into a native pandas `Dataframe` structure. Then the `shape` function prints a bit of basic information about the data.
 
 Not using an encoding has worked for me in the past. But not this time! Following [a tip](https://srinujammu.wordpress.com/2018/03/01/how-to-avoid-unicodedecodeerror-while-loading-data-into-dataset-in-python/) about dealing with data that was exported from Excel, the use of `cp1252` seems to fix things.
 
@@ -164,7 +164,7 @@ Pandas has a _ton_ of useful features just at this stage, but the `shape` functi
 
 Whoa! Almost half a million obstructions are being tracked by the FAA, and each with 19 attributes. That could take a while to work with...
 
-Being a geographer, I really want to see the spatial distribution. Geopandas can read coordinates from columns in a regular pandas dataframe and create a 'geometry` column suitable for analysis and visualization.
+Being a geographer, I really want to see the spatial distribution. Geopandas can read coordinates from columns in a regular pandas dataframe and create a 'geometry' column suitable for analysis and visualization.
 
 If you're not familiar with map projections and coordinate reference systems (CRSs) then the `gdr.crs` will look a little weird. Not to worry: it's just how we tell geopandas that this is latitude and longitude data and that we want to use a 'worldwide web mercator' projection. It means that the data will be compatible with lots of online mapping tools. More of that in a minute.
 
@@ -210,16 +210,43 @@ gdf.query("STATE=='MN'").to_file("mn.geojson", driver="GeoJSON")
 gdf.to_file("dof.geojson", driver="GeoJSON")
 {{</highlight>}}
 
-The full ~500K records are dumped into a 230MB text file called `dof.geojson`. But because that takes so darn long to open, I also used the pandas `query` function to filter down the massive dataset into something more manageable: the obstructions in the State of Minnessota.
+The full ~500K records are dumped into a 230MB text file called `dof.geojson`. But because that takes so darn long to open, I also used the pandas `query` function to filter down the massive dataset into something more manageable: the obstructions in the State of Minnessota. Here's one feature courtesy of `cat mn.geojson | jq '.features[0]'`:
 
 {{<highlight json>}}
-PE": "TOWER             ", "QUANTITY": 1, "AGL": 265, "AMSL": 1471, "LIGHTING": "D", "ACCURACY": " 1A", "MARKING": "N", "FAA STUDY": "2018AGL14141OE", "ACTION": "A", "JDATE": 2019063 }, "geometry": { "type": "Point", "coordinates": [ -93.847584, 43.502834 ] } },
-{ "type": "Feature", "properties": { "OAS": "27-024251", "VERIFIED STATUS": "O", "COUNTRY": "US", "STATE": "MN", "CITY": "ELMORE          ", "LATDEC": 43.50885, "LONDEC": -94.085373, "DMSLAT": "43 30 31.86N", "DMSLON": "094 05 07.34W", "TYPE": "TANK
+{
+  "type": "Feature",
+  "properties": {
+    "OAS": "27-001879",
+    "VERIFIED STATUS": "O",
+    "COUNTRY": "US",
+    "STATE": "MN",
+    "CITY": "AUSTIN          ",
+    "LATDEC": 43.501862,
+    "LONDEC": -92.930417,
+    "DMSLAT": "43 30 06.70N",
+    "DMSLON": "092 55 49.50W",
+    "TYPE": "TOWER             ",
+    "QUANTITY": 1,
+    "AGL": 315,
+    "AMSL": 1486,
+    "LIGHTING": "D",
+    "ACCURACY": " 5D",
+    "MARKING": "N",
+    "FAA STUDY": "2000AGL06081OE",
+    "ACTION": "C",
+    "JDATE": 2011327
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -92.930417,
+      43.501862
+    ]
+  }
+}
 {{</highlight>}}
 
-Ugly!
-
-And that took a really long time (2 minutes? I think?!). If I was serious about performance I would have sliced off the attributes I don't need, etc. But I'm experimenting so it's OK. No need to optimize when I'm just poking at the data in an exploratory fashion.
+And that took a really long time to export (2 minutes? I think?!). If I was serious about performance I would have sliced off the attributes I don't need, etc. But I'm experimenting so it's OK. No need to optimize when I'm just poking at the data in an exploratory fashion.
 
 ## Map using deck.gl
 
@@ -349,6 +376,6 @@ My general thoughts:
 * The rapidly maturing open source geospatial data science toolkit build on a rich set of tools, practices, and libraries from the data science community.
 * Python seems to have the geospatial mindshare.
 * It's all just source code. With typical good practices for Python projects--and source code in general--we have a repeatable, predictable model.
-* The stitching together is part of the open source mindset. It's not all in one package, but then again 'data science' is 90% finding data and methods, and 10% stitching it together to derive insights (that 90% part probably speaks to my workflow rather than some universal truth!).
+* The stitching together is familiar to anyone with an open source or POSIX-based mindset. It's not all in one package, but then again 'data science' is 90% finding data and methods, and 10% stitching it together to derive insights (that 90% part probably speaks to my workflow rather than some universal truth!).
 
 Good luck geo-spelunking with this interesting and diverse toolset.
