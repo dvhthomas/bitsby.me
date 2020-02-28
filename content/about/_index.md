@@ -4,8 +4,6 @@ date: 2020-02-11T20:37:28-07:00
 draft: false
 ---
 
-{{< figure src="me.jpg" title="Me" >}}
-
 Hello, my name is Dylan Thomas. I've have a varied and interesting career in technology which all began on Sun workstations while studying geography. Yes, I'm a geographer by training, getting my BSc. in Human and Physical Geography at the [University of Reading](http://www.reading.ac.uk/ges/) (say "Redding" not "Reeding") in England. I moved the the United States from my native England many years ago and then got my MA in Geography at the University of North Carolina at Charlotte (UNCC).
 
 I was bitten my the computer bug as I tried to figure out geographic information systems and quickly came to the realization that I'd been doing it all wrong: text files and command line interfaces were the way to go, and graphic user interfaces just got in the way of doing work accurately and quickly.
@@ -22,3 +20,5 @@ Since then I've done a variety of things like:
 But the whole way through, I keep geeking out with languages, text editors, and new ways to solving the same old problems. I am, you see, an incurable tinkerer. Which is why my blog stops and starts, and covers a rather odd range of topics in not much depth. It's how I roll.
 
 Follow the various links to LinkedIn, Twitter, and GitHub for more. Or stick around here to read posts.
+
+{{< figure src="me.jpg" title="Me" >}}
