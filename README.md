@@ -5,7 +5,7 @@
 ## Author and publish
 
 ```bash
-make post title="some-interesting-title"
+make post title="some-interesting-title" # note the dashes...
 ...write write write...
 git add .
 git commit -m "my cool new post"
