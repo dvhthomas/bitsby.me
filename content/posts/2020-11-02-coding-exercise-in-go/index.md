@@ -4,7 +4,7 @@ date: 2021-02-06T12:02:31-07:00
 tags: [code]
 abstract: [Answering my own coding exercise using Go]
 toc: true
-draft: true
+draft: false
 mermaid: false
 ---
 
