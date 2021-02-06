@@ -1,0 +1,4 @@
+{{ $file := .Get "file" }}
+{{ $content := readFile (printf "%s%s" .Page.File.Dir $file) | safeHTML }}
+{{ $lang := .Get "lang" }}
+{{ (print "```" $lang "\n" $content "\n```") | safeHTML }}
