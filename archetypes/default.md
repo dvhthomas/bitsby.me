@@ -2,8 +2,8 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 tags: []
-summary: []
+abstract: []
 toc: true
 draft: true
+mermaid: false
 ---
-

@@ -1,0 +1,11 @@
+TopLevelGroup
+├── private
+│   ├── consulting
+│   │   ├── client1
+│   │   │   └── project-one
+│   │   └── client2
+│   │       └── project-another
+│   └── top-secret
+│       └── project-a
+└── public
+    └── open-source-project

@@ -30,6 +30,29 @@ Or you can use a hugo shortcode like this:
 
 It just makes it easier to manage content.
 
+## Embedding content
+
+Use the `code` shortcode. This looks for files by name _within the same directory as the post_. So for example, if the post is in `content/posts/2021-01-01-hello/index.md` then you could include the file `content/posts/2021-01-01-hello/test.py` like so:
+
+```txt
+{{% code file="test.py" lang="python" %}
+```
+
+## Diagrams
+
+[MermaidJS](https://mermaid-js.github.io/mermaid/#/) diagrams are supported.
+
+In the front matter include the `mermaid = true` statment, then in the body do something like this:
+
+```txt
+{{<mermaid>}}
+graph TD;
+    t(top node)
+    note
+    t-->B;
+{{</mermaid>}}
+```
+
 ## Notebooks
 
 Notebooks are pushed to gists where they can be embedded in posts using the `{{ gist 123234 }}` shortcode. But I want to work on those notebooks locally first, and keep a copy of the source code without relying exclusively on gists.

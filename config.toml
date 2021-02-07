@@ -1,12 +1,15 @@
 title = "Bits By Me"
 baseURL = "https://bitsby.me"
 languageCode = "en-us"
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+
+[module]
+  [[module.imports]]
+    path = "github.com/theNewDynamic/gohugo-theme-ananke"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-Paginate = 20
+sectionPagesMenu = "main"
+paginate = 4 
 googleAnalytics = ""
 enableRobotsTXT = true
 
@@ -37,4 +40,4 @@ enableRobotsTXT = true
   [markup.highlight]
     lineNos = true
     lineNumbersInTable = false
-    style = "dracula"
+    style = "github"

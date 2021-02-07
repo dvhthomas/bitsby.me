@@ -3,7 +3,7 @@ title: "Capturing edit events in ArcMap"
 date: 2008-10-24T20:11:30-07:00
 abstract: "The difference between saving and edit and stopping the edit process is not immediately clear in ArcMap"
 toc: true
-tags: [esri, dotnet]
+tags: [esri, dotnet, geospatial]
 draft: false
 ---
 ## Issue
