@@ -15,11 +15,11 @@ I did a thing and it got posted.
 
 By reference:
 
-[Welcome back!]({{< ref "posts/welcome-back.md" >}})
+[Welcome back!]({{< ref "blog/2020-02-11/welcome-back/index.md" >}})
 
 Or a specific link in a page. This uses the fact that markdown adds an automatic ref to titles:
 
-[Blogging title]({{< relref "posts/welcome-back.md#im-blogging-again" >}})
+[Blogging title]({{< relref "blog/2020-02-11/welcome-back/index.md#im-blogging-again" >}})
 
 ## A gist on Github
 

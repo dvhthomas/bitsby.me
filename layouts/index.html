@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div id="home-jumbotron" class="jumbotron text-center">
+    <h1>{{ .Title }}</h1>
+    <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
+</div>
+<p>Thanks for visiting. Here's a list of the most recent blog posts.
+    View the <a href="/blog/">full list</a> or the <a href="/til/">Today
+    I Learned...</a> micro-posts.
+</p>
+{{ range first 5 (where (where .Site.Pages "Section" "blog") ".Title" "!=" "Blog") }}
+<p>
+<a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+<br>
+{{ partial "date-and-tags.html" . }}
+</p>
+{{ end }} 
+{{ end }}

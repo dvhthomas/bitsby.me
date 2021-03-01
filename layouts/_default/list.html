@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<!--
+  The .Content here is the magic bit that also
+  renders the text on the _index.md page in each
+  of the content folders, e.g., the content in
+  content/blog/_index.md.
+-->
+{{ .Content }}
+
+{{ range .Pages.ByPublishDate.Reverse }}
+<p>
+  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <br>
+  {{ partial "date-and-tags.html" . }}
+</p>
+{{ end }}
+
+{{ end }}
