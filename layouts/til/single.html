@@ -2,7 +2,8 @@
 
 <article>
     <header>
-        <h1>{{ .Title }}</h1>
+        {{ $dateFormat := .Site.Params.dateFormat | default "January 2, 2006" }}
+        <h1>{{ .PublishDate.Format $dateFormat }}</h1>
     </header>
     {{ partial "date-and-tags.html" . }}
     <p></p>

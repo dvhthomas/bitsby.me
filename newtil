@@ -1,7 +1,2 @@
 #!/bin/sh
-if [[ $# -eq 0 ]] ; then
-  echo 'Provide a hyphen-separated-name for the TIL post'
-  exit 1
-fi
-
-hugo new til/$(date "+%Y-%m-%d")/$1/index.md
+hugo new til/$(date "+%Y-%m-%d")/index.md
