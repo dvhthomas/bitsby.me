@@ -1,13 +1,12 @@
 ---
-title: "Hugo Guide"
+title: "2021 02 28"
 date: 2021-02-28T21:49:35-07:00
 tags: []
 toc: true
 series: []
 mermaid: false
-draft: true
+draft: false
 ---
-
 
 * [Make a Hugo blog from scratch][1]
 
