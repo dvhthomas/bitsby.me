@@ -47,7 +47,7 @@ enableRobotsTXT = true
 
 [permalinks]
   blog = "/:year/:month/:title"
-  til = "til/:year/:month/:day/"
+  til = "til/:year-:month-:day/"
 
 [markup]
   [markup.highlight]
