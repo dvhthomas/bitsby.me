@@ -5,7 +5,7 @@ tags: ["leadership", "architecture", "opensource"]
 toc: true
 series: []
 mermaid: false
-draft: true
+draft: false
 ---
 
 - **Picking a license.** Was trying to remember why we selected the Mozilla Public License (MPL) for Woolpert's open source work.
