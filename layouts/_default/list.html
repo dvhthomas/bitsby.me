@@ -15,6 +15,9 @@
   <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
   <br>
   {{ partial "date-and-tags.html" . }}
+  {{ if .Params.summary }}
+  <p class="summary">{{ .Params.summary | markdownify | truncate 200 }}</p>
+  {{ end }}
 </p>
 {{ end }}
 

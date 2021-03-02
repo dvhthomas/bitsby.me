@@ -9,14 +9,32 @@
 #nav-border {
     border-bottom: 1px solid #212529;
 }
+strong {
+    font-weight: 700;
+}
 #main {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
     margin-top: 1em;
     margin-bottom: 4em;
 }
+#main p {
+    line-height: 1.6rem;
+}
+#main h1, h2, h3 {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 1.0rem;
+    padding-top: 1.3rem;
+}
 #home-jumbotron {
     background-color: inherit;
+}
+#main blockquote {
+    font-weight: 300;
+    font-style: italic;
+    padding-left: 2rem;
 }
 .font-125 {
     font-size: 125%;
@@ -26,5 +44,18 @@
 }
 img {
     max-width: 100%;
+}
+.summary {
+    color: hsla(237, 0%, 40%, 1);
+    font-size: .9rem;
+}
+#abstract {
+    border-radius: 10px;
+    background-color: hsla(237, 0%, 90%, 1);
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+}
+aside.toc ul > li {
+    list-style-type: none;
 }
 </style>

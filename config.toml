@@ -2,6 +2,7 @@ baseURL = "https://bitsby.me/"
 languageCode = "en-us"
 title = "Bits By Me"
 
+paginate = 3
 enableRobotsTXT = true
 
 [params]

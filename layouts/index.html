@@ -8,6 +8,7 @@
     View the <a href="/blog/">full list</a> or the <a href="/til/">Today
     I Learned...</a> micro-posts.
 </p>
+<br/>
 {{ range first 5 (where (where .Site.Pages "Section" "blog") ".Title" "!=" "Blog") }}
 <p>
 <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>

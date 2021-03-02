@@ -6,6 +6,9 @@
     </header>
     {{ partial "date-and-tags.html" . }}
     <p></p>
+    {{ if .Params.summary }}
+    <div id="abstract">{{ .Params.summary | markdownify }}</div>
+    {{ end }}
     {{ partial "toc.html" . }}
     {{ .Content }}
     {{ partial "related.html" . }}
