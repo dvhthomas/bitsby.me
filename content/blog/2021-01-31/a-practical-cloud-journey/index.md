@@ -2,7 +2,7 @@
 title: "A Practical Cloud Journey"
 date: 2021-01-31T11:35:17-07:00
 tags: [leadership, cloud]
-summary: [Reposting the kickoff  to Woolpert's 2021 Practical Cloud Journey series.]
+summary: Re-posting the kickoff  to Woolpert's 2021 Practical Cloud Journey series.
 toc: true
 draft: false
 ---

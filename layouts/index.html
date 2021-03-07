@@ -15,5 +15,8 @@
 <br>
 {{ partial "date-and-tags.html" . }}
 </p>
+  {{ if .Params.summary }}
+  <p class="summary">{{ .Params.summary | markdownify | truncate 200 }}</p>
+  {{ end }}
 {{ end }} 
 {{ end }}
