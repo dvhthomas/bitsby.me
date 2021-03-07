@@ -51,3 +51,12 @@ graph TD;
     note
     t-->B;
 {{</mermaid>}}
+
+## Reference URLs
+
+You can avoid typing a URL multiple times by using a reference-type URL.
+Use either a numbered [footnote style for whatever text][1].
+Or specific text that matches the [link text itself].
+
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
