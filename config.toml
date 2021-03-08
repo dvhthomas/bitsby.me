@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Bits By Me"
 
 paginate = 3
-enableRobotsTXT = true
 
 [params]
     homeText = "Tech cloud geo learning"
