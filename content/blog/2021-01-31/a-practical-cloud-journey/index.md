@@ -2,7 +2,10 @@
 title: "A Practical Cloud Journey"
 date: 2021-01-31T11:35:17-07:00
 tags: [leadership, cloud]
-summary: Re-posting the kickoff  to Woolpert's 2021 Practical Cloud Journey series.
+summary: |-
+    Re-posting the kickoff  to Woolpert's 2021 Practical Cloud Journey series.
+    It's all about customer value, not getting ahead of yourself (or your
+    competence), and the importance of context.
 toc: true
 draft: false
 ---

@@ -2,7 +2,10 @@
 title: "Coding Exercise in Go"
 date: 2021-02-06T12:02:31-07:00
 tags: [code]
-abstract: [Answering my own coding exercise using Go]
+summary: |-
+  Answering my own coding exercise using Go and sharing a 
+  couple of things I learned along the way about JSON and
+  concurrency.
 toc: true
 draft: false
 mermaid: false
