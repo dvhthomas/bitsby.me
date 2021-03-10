@@ -32,10 +32,12 @@ Now point at a SQLite database with `dv training.db`:
 
 Or open a shapefile `dv some-shape-file.shp` which is the CSV of spatial data:
 
-{{<figure src="shp.png" title="A SQLite table - VisiData lets you choose from a list of all tables">}}
+{{<figure src="shp.png" title="Viewing a shapefile with zero GIS software">}}
 
 In this case I've tagged two columns by typing `!` so that I can sort by them using `[` and `]`.
 But even better, I can use those key columns for quick summary statistics using `Shift-F`:
+
+And adding data types to the columns is easy too: just select a column and type `%` for Date, and so on.
 
 {{<figure src="shp-summary.png" title="Total area of features by summarizing">}}
 
