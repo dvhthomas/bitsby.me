@@ -5,6 +5,10 @@ draft: true
 mermaid: true
 ---
 
+## Pictures
+
+{{< figure src="/about/me.jpg" title="The author as a younger man" >}}
+
 ## Twitter
 
 I did a thing and it got posted.
