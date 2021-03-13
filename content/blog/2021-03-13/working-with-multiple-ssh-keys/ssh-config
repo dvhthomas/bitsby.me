@@ -1,0 +1,20 @@
+Host *.github.com
+  User git@github.com
+  IdentitiesOnly yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_github_personal
+Host *.github.com/woolpert
+  HostName *.github.com/woolpert
+  AddKeysToAgent yes
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_github_woolpert
+Host *.source.cloud.google.com:2022/fleetrouting-app-ops/fleetrouting-app
+  User dylan.thomas@woolpert.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_gcp_csr_fleetrouting
+  IdentitiesOnly yes
+Host *.gitlab.com/woolpert
+  User git@gitlab.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_gitlab_woolpert
+  IdentitiesOnly yes
