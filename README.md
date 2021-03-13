@@ -29,5 +29,4 @@ To start a dev server which also published Draft content:
 Look at the draft [Tips](http://localhost:1313) post to see examples of how you can use various elements like diagrams, code, and tweets.
 
 If you want to publish and put all the non-draft content into the `public/` directory just type `hugo` on its own.
---
 
