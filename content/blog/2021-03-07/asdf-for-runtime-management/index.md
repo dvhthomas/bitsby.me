@@ -102,6 +102,9 @@ asdf install java adoptopenjdk-15.0.2+7
 ```
 
 > There’s [more configuration possible for Java](https://github.com/halcyon/asdf-java) if needed to make it play nicely with MacOS.
+> Specifically:
+> - set JAVA_HOME properly add this to your `.zshrc`: `. ~/.asdf/plugins/java/set-java-home.zsh`
+> - Make sure Mac native apps work with the correct Java: `java_macos_integration_enable = yes`
 
 Running `which python` on my terminal tells me that it worked:
 
