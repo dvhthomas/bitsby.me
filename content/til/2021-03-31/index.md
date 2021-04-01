@@ -4,10 +4,10 @@ date: 2021-03-31T08:28:49-06:00
 tags: [datascience]
 toc: true
 series: []
-summary: 
-mermaid: true
+summary: Learning about Pangeo and friends
+mermaid: false
 mathjax: true
-draft: true
+draft: false
 ---
 
 ## Pangeo
