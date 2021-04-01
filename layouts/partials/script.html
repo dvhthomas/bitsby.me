@@ -9,3 +9,7 @@
 <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 {{ end }}
+
+{{ if (.Params.mathjax) }}
+{{ partial "mathjax_support.html" . }}
+{{ end }}

@@ -6,6 +6,7 @@ toc: true
 series: []
 summary: 
 mermaid: false
+mathjax: false
 draft: true
 ---
 

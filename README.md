@@ -30,3 +30,22 @@ Look at the draft [Tips](http://localhost:1313) post to see examples of how you 
 
 If you want to publish and put all the non-draft content into the `public/` directory just type `hugo` on its own.
 
+## Content pre-processing
+
+### Shrink PNGs
+
+Following [this advice](https://til.simonwillison.net/macos/shrinking-pngs-with-pngquant-and-oxipng) it's a good idea to squish PNG images down before adding to Git or the blog.
+I'm seeing results like a reduction from 480kb to 70kb.
+
+One time:
+
+```sh
+brew install pngquant oxipng
+```
+
+Then use like so, passing in the name of a content directory containing PNGs to squish:
+
+```sh
+pngquant --quality 20-50 content/til/2021-03-31/*.png
+oxipng -o 3 -i 0 --strip safe content/til/2021-03-31/*-fs8.png
+```
