@@ -4,7 +4,7 @@ date: 2021-03-16T11:34:59-06:00
 tags: [terraform, leadership]
 toc: true
 series: []
-summary: 
+summary: From GCP to Terraform
 mermaid: false
 draft: false
 ---

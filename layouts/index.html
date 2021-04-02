@@ -4,19 +4,35 @@
     <h1>{{ .Title }}</h1>
     <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
 </div>
-<p>Thanks for visiting. Here's a list of the most recent blog posts.
-    View the <a href="/blog/">full list</a> or the <a href="/til/">Today
-    I Learned...</a> micro-posts.
+<p>Here's the latest. View the <a href="/blog/">Blog</a> or <a href="/til/">Today
+    I Learned&hellip;</a> sections for more.
 </p>
-<br/>
-{{ range first 5 (where (where .Site.Pages "Section" "blog") ".Title" "!=" "Blog") }}
-<p>
-<a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
-<br>
-{{ partial "date-and-tags.html" . }}
-</p>
-  {{ if .Params.summary }}
-  <p class="summary">{{ .Params.summary | markdownify | truncate 200 }}</p>
-  {{ end }}
-{{ end }} 
+
+  <h2>Today I Learned&hellip;</h2>
+
+  {{ range first 3 (where (where .Site.Pages "Section" "til") ".Title" "!=" "Today I Learned") }}
+  <p>
+    <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}
+      {{ if .Params.summary }}
+      <small class="summary">&mdash; {{ .Params.summary | markdownify | truncate 200 }}</small>
+      {{ end }}
+    </a>
+  </p>
+  {{ end }} 
+  <small class="muted"><a href="/til/">More&hellip;</a></small>
+
+  <h2>Recent Blog Posts</h2>
+
+  {{ range first 5 (where (where .Site.Pages "Section" "blog") ".Title" "!=" "Blog") }}
+  <p>
+  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <br>
+  {{ partial "date-and-tags.html" . }}
+  </p>
+    {{ if .Params.summary }}
+    <p class="summary">{{ .Params.summary | markdownify | truncate 200 }}</p>
+    {{ end }}
+  {{ end }} 
+
+  <small class="muted"><a href="/blog/">More&hellip;</a></small>
 {{ end }}
