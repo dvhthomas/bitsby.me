@@ -10,7 +10,7 @@
 -->
 {{ .Content }}
 
-{{ range .Pages.ByPublishDate.Reverse }}
+{{ range .Paginator.Pages.ByPublishDate.Reverse }}
 <p>
   <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
   <br>
@@ -20,5 +20,6 @@
   {{ end }}
 </p>
 {{ end }}
+{{- partial "pagination.html" . -}}
 
 {{ end }}

@@ -4,7 +4,7 @@ date: 2021-04-02T10:13:32-06:00
 tags: [tools, google-cloud]
 toc: true
 series: []
-summary: 
+summary: PNG squishing and static sites on GCS
 mermaid: false
 mathjax: false
 draft: false
