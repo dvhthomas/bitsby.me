@@ -5,11 +5,11 @@ title = "Bits By Me"
 paginate = 10
 
 [params]
-    homeText = "Tech cloud geo learning"
+    homeText = "tech cloud geo learning"
     dateFormat = "January 2, 2006"
 
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
