@@ -14,6 +14,9 @@
 <p>
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
   <a class="font-125" href="{{ .RelPermalink }}">TIL &mdash; {{ .PublishDate.Format $dateFormat }}</a>
+  {{ if .Params.summary }}
+  &mdash; <span class="summary">{{ .Params.summary | markdownify | truncate 200 }}</span>
+  {{ end }}
   <br>
   {{ partial "date-and-tags.html" . }}
 </p>
