@@ -1,0 +1,23 @@
+graph O {
+  layout=circo
+  colorscheme=bugn9
+  graph [bgcolor=transparent]
+  node [
+    style="filled",
+  ];
+  edge [
+    penwidth=0.3,
+    pencolor=8,
+  ];
+  a [label="Bob"]
+  b [label="Alice"]
+  c [label="Cyril"]
+  d [label="Derek"]
+  e [label="Erica"]
+  f [label="Felicity"]
+
+  a -- { b; c; d;e;f} [penwidth=1.5];
+  b -- { c; d;f;e};
+  f -- { c; d;e;};
+  e -- { c;d;};
+}
