@@ -4,7 +4,7 @@ date: 2021-04-29T17:46:36-06:00
 tags: [git]
 toc: true
 series: []
-summary: 
+summary: Default git branch name
 mermaid: false
 mathjax: false
 draft: false
