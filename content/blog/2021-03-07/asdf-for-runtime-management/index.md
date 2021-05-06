@@ -219,6 +219,15 @@ rm -rf .venv
 
 Now redoing my `venv` setup worked just fine.
 
+### Install default packages
+
+You can install default packages to any new Python.
+Create a file `$HOME/.default-python-packages` and add package definitions exactly as you would for a `requirements.txt` file for `pip` to install.
+For example, I use `black` to format code so I always want that handy:
+
+```txt
+black
+```
 
 ### Teach asdf about new binaries
 

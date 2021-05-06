@@ -15,8 +15,8 @@ draft: false
 I was setting up a new Ubuntu machine today and was using `asdf` to get me there.
 `asdf install python 3.9.5` complained that various dependencies for Python extensions like bz2 and OpenSSL were missing.
 
-```sh
-sdf install python 3.9.5
+{{< highlight bash "hl_lines=6-7" >}}
+$ sudu install python 3.9.5
 python-build 3.9.5 /home/dylan/.asdf/installs/python/3.9.5
 Downloading Python-3.9.5.tar.xz...
 -> https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tar.xz
@@ -45,11 +45,11 @@ Installing collected packages: setuptools, pip
   WARNING: The scripts pip3 and pip3.9 are installed in '/home/dylan/.asdf/installs/python/3.9.5/bin' which is not on PATH.
   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
 Successfully installed pip-21.1.1 setuptools-56.0.0
-```
+{{</highlight>}}
 
 ## Solution - Install prerequisite build tools
 
-After some digging I found the following combination to get me over the hump:
+After some digging [I found the following](https://stackoverflow.com/a/57609842) combination to get me over the hump:
 
 ```sh
 sudo apt install build-essential libssl-dev \
