@@ -4,7 +4,9 @@ date: 2021-04-05T13:09:01-06:00
 tags: [theory, cs]
 toc: true
 series: [big-o]
-summary: 
+summary: |-
+    A short and probably obvious statement for people who studied computer science.
+    But for me is not obvious and took a short bit of reading on Big(O).
 mermaid: true
 mathjax: true
 draft: false
