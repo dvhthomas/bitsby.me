@@ -7,7 +7,7 @@ toc: false
 
 {{< figure src="me.jpg" title="The author as a younger man" >}}
 
-Hello, my name is Dylan Thomas. I've have a varied and interesting career in technology which all began on Sun workstations while studying geography. Yes, I'm a geographer by training, getting my BSc. in Human and Physical Geography at the [University of Reading](http://www.reading.ac.uk/ges/) (say "Redding" not "Reeding") in England. I moved the the United States from my native England many years ago and then got my MA in Geography at the University of North Carolina at Charlotte (UNCC).
+Hello, my name is Dylan Thomas. I've have a varied and interesting career in technology which all began on Sun workstations while studying geography. Yes, I'm a geographer by training, getting my BSc. in Human and Physical Geography at the [University of Reading](http://www.reading.ac.uk/ges/) (say "Redding" not "Reeding") in England. I moved to the United States from my native England many years ago and then got my MA in Geography at the University of North Carolina at Charlotte (UNCC).
 
 I was bitten by the computer bug as I tried to figure out geographic information systems and quickly came to the realization that I'd been doing it all wrong: text files and command line interfaces were the way to go, and graphic user interfaces just got in the way of doing work accurately and quickly.
 
