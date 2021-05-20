@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ partial "search_form.html" . }}
+
+<main>
+    <div id="search-results"></div>
+    <div class="search-loading">Loading...</div>
+
+    <script id="search-result-template" type="text/x-js-template">
+        <div id="summary-${key}">
+            <h3><a href="${link}">${title}</a></h3>
+            <p>${snippet}</p>
+            <p>
+                <small>
+                    ${ isset tags }Tags: ${tags}<br>${ end }
+                </small>
+            </p>
+        </div>
+    </script>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+
+{{ $js := "js/search.js" | absURL }}
+<script src="{{ $js }}"></script>
+
+{{ end }}

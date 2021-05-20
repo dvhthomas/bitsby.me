@@ -13,6 +13,8 @@ paginate = 10
   priority = 0.5
   filename = "sitemap.xml"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
 [menu]
     [[menu.main]]
