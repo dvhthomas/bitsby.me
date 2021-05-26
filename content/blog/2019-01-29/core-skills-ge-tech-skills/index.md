@@ -1,5 +1,5 @@
 ---
-title: "Core Skills >= Technical Skills"
+title: "Core Skills ≥ Technical Skills"
 date: 2019-01-29T19:49:24-07:00
 tags: [leadership]
 draft: false
@@ -11,7 +11,8 @@ toc: true
 
 [Reposted from LinkedIn](https://www.linkedin.com/pulse/core-skills-technical-skill-dylan-thomas/)
 
-Empathy and Listening are greater than technical skill alone. Or put another way, Core Skills >= Technical Skill when it comes to high performance.
+Empathy and Listening are greater than technical skill alone.
+Or put another way, Core Skills ≥ Technical Skill when it comes to high performance.
 
 ## A Balanced View
 
