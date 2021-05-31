@@ -1,7 +1,7 @@
 ---
 title: 2021 05 31
 date: 2021-05-31T12:06:55-06:00
-tags: []
+tags: [tools, visualization, strategy]
 toc: true
 series: []
 summary: Wardley maps to visualize strategy
