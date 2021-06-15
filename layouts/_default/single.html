@@ -1,15 +1,15 @@
 {{ define "main" }}
 
+<header>
+    <h1>{{ .Title }}</h1>
+</header>
+{{ partial "date-and-tags.html" . }}
+<p></p>
+{{ if .Params.summary }}
+<div id="abstract">{{ .Params.summary | markdownify }}</div>
+{{ end }}
+{{ partial "toc.html" . }}
 <article>
-    <header>
-        <h1>{{ .Title }}</h1>
-    </header>
-    {{ partial "date-and-tags.html" . }}
-    <p></p>
-    {{ if .Params.summary }}
-    <div id="abstract">{{ .Params.summary | markdownify }}</div>
-    {{ end }}
-    {{ partial "toc.html" . }}
     {{ .Content }}
     <br>
     <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title | htmlEscape }}&summary={{ .Summary | htmlEscape }}&source={{ .Site.BaseURL }}">&#128279; Share on LinkedIn</a>
