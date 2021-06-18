@@ -1,0 +1,6 @@
+project-id = "exp-traintrack-tf"
+gcp-region = "us-west1"
+svc-account-tt = "svc-acct-traintrack"
+artifact-repo =  "traintrack-repo"
+cloud-run-service =  "svc-traintrack"
+site-address =  "traintrack.woolpert.io"
