@@ -14,6 +14,15 @@ draft: false
 
 If you just need a template [make a copy of the source spreadsheet](https://docs.google.com/spreadsheets/d/1WXxGTW1laZzyY_jJKNZTuhUE5Y6v59tPY9WXg9KDHx8/edit?usp=sharing) and follow the instructions.
 
+One of the things I find myself doing occasionally is putting together workshops, team meetings, and the like.
+That typically involves creating an agenda, and I usually reach for Google Sheets to create that.
+Columns for Start Time, End Time, Session title, session lead, etc.
+And during that agenda creation process there's often some churn: move this meeting, change the length of that one, switch to a different day, and so on.
+
+This is _really_ obvious stuff but there are a couple of tips I've learned...and keep forgetting...so I'm writing them down here.
+
+The two things are: (a) how to highlight non-meeting rows like breaks, and (b) how to make quick changes to the order or duration of sessions a lot easier.
+
 ### Highlight the rows with food or coffee
 
 I want to highlight the entire row of the agenda where there is a break or lunch.
@@ -76,7 +85,7 @@ With that in place, any cell `D-something` containing 'lunch' or 'break' (but *n
 One thing that always bugs me about putting an agenda together is getting the start and end times correct.
 You start with columns for Start and End time.
 Then you add a few rows with new sessions.
-Then someone says _"Why don't we make the second session longer?"_, or heaven forbid: _"Let's move that session to later in the day".
+Then someone says _"Why don't we make the second session longer?"_, or heaven forbid: _"Let's move that session to later in the day"_.
 Aaaargh! Now I've got to fix my start and end times.
 
 I know what you're thinking: why don't you just have the Start Time of the next session point to the End Time of the previous session?
