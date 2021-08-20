@@ -47,6 +47,8 @@ I tend to select the entire set of columns I need rather than a rectangular rang
 But really that's not the point.
 
 But what should the custom formula say? Maybe a couple of `SEARCH` functions with an `OR` in there to cover both 'lunch' and 'break'?
+And remember that we want `LOWER` case too.
+
 Like so: `OR(SEARCH("lunch",LOWER(D14),1),SEARCH("break",LOWER(D14),1))`.
 That would work...except it doesn't.
 
@@ -76,7 +78,8 @@ And even with the `LOWER()` expression removed I still get the result I'm lookin
 
 Back to highlighting the whole row!
 I know that the work 'break' or 'lunch' (or 'dinner'!) would always appear in column `D` so I need to anchor on that one.
-As a result my _Custom formula_ on the _Conditional formatting_ panel looks like this: `=REGEXMATCH(LOWER($D1),"(break\b)|(lunch\b)|(dinner\b)") = TRUE`. Note that I'm including the leading `=` sign.
+As a result my _Custom formula_ on the _Conditional formatting_ panel looks like this: `=REGEXMATCH(($D1),"(?i)(break\b)|(lunch\b)|(dinner\b)") = TRUE`.
+Note that I'm including the leading `=` sign, and the `LOWER` is now gone in favor of the `(?i)`.
 
 With that in place, any cell `D-something` containing 'lunch' or 'break' (but *not* 'breakfast' or 'lunchy') will have a nice highlight.
 
