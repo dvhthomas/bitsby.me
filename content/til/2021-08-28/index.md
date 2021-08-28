@@ -7,7 +7,7 @@ series: []
 summary: Using GitLFS for the first time.
 mermaid: false
 mathjax: false
-draft: true
+draft: false
 ---
 
 ## Using GitLFS for the first time
