@@ -1,5 +1,5 @@
 ---
-title: First time with GitLFS
+title: 2021-08-28
 date: 2021-08-28T07:40:13-06:00
 tags: [git]
 toc: true
