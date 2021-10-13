@@ -19,6 +19,13 @@ Except you run `./newtil` and you don't need to provide a title.
 
 Each post is put into a folder like `til/1971-01-01/` or `blog/1971-01-01/awesome-title` with an `index.md` file. This gives you a spot to drop post-specific content next to the post itself. For example, if you want an image for a post you can drop it in that folder and reference it in the post thus:
 
+## Hosting
+
+The blog itself is hosting on [Render.com](https://render.com).
+Log in using my personal Google Account will give access to the [Personal Blog dashboard](https://dashboard.render.com/static/srv-c0bm3gdua9vt7i8g0q80/settings).
+
+The DNS configuration is in [Google Domains](https://domains.google.com/registrar/bitsby.me/dns), again accessible using my personal Google account.
+
 ## Preview
 
 To start a dev server which also published Draft content:
