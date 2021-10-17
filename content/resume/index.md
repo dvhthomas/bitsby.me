@@ -5,7 +5,7 @@ draft: false
 toc: false
 ---
 
-Email: **dylant at hey dot com** || Website: **[Bits By Me](https://bitsby.me)** || LinkedIn: [Dylan Thomas](https://www.linkedin.com/in/dylan-thomas/)
+Email: **dylant at hey dot com** | Website: **[Bits By Me](https://bitsby.me)** | LinkedIn: [Dylan Thomas](https://www.linkedin.com/in/dylan-thomas/)
 
 
 > I am a highly experienced technical leader and builder of remote teams. I balance open communication and team harmony with a strong focus on customer value. Nothing makes me happier than getting things shipped to customers with an appropriately high quality bar.
