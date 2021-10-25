@@ -5,7 +5,6 @@ tags: [leadership]
 draft: false
 summary: |-
     Re-posting a popular article of mine from LinkedIn, I muse over the relative benefits of technical skills over core skills in hiring.
-    And by _'muse'_, I mean predictably mean I _'express a strong opinion that I'm right'_
 toc: true
 ---
 
