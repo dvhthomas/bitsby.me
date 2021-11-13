@@ -14,7 +14,11 @@
  
  Tip: the .tables and .schema [table] commands are handy!
  */
-.open sample.db.headers on.mode column WITH tracks_and_artists AS (
+.open sample.db
+.headers on
+.mode column
+
+WITH tracks_and_artists AS (
 	SELECT t.albumid,
 		albums.artistid,
 		artists.name,

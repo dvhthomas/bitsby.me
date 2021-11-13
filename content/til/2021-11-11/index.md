@@ -33,7 +33,7 @@ But I had fun doing it.
 {{% code file="main.py" lang="python" %}}
 
 
-### SQL coding exercise
+## SQL coding exercise
 
 [This short set of SQL exercises was really fun to write](https://replit.com/@DylanThomas6/sql-basics#README.md).
 
