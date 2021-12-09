@@ -3,6 +3,7 @@ title: "Tips"
 date: 2020-02-12T07:45:59-07:00
 draft: true
 mermaid: true
+mathjax: true
 ---
 
 ## Pictures
@@ -64,3 +65,14 @@ Or specific text that matches the [link text itself].
 
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
+
+## Math
+
+Set `mathjax: true` in the front matter.
+Then use either the `${inline}$` for or block form using two `\$\$`:
+
+`$$\large CAGR = \left( V_{final} \over V_{begin} \right)^{1/t} - 1 $$`
+
+Construct formulae using the [`$\LaTeX{}$` reference for math](https://www.caam.rice.edu/~heinken/latex/symbols.pdf).
+Use the great reference on [Overleaf](https://www.overleaf.com/learn/latex/Brackets_and_Parentheses) for lots of worked examples.
+And [this StackExchange Math](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference) articles is superb.

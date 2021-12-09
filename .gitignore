@@ -16,4 +16,4 @@ $RECYCLE.BIN/
 .ipynb_checkpoints
 .vscode
 notebooks/*.*
-!notebooks/*.ipynb
+!notebooks/*.ipynb.hugo_build.lock
