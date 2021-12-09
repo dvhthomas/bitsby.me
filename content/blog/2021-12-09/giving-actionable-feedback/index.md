@@ -1,7 +1,7 @@
 ---
 title: Giving Actionable Feedback
 date: 2021-12-09T10:49:28-07:00
-tags: []
+tags: [management, growth]
 toc: true
 series: []
 summary: Feedback is a gift. But how do you provide feedback to someone while increasing the chance that the person can hear and maybe even act on what you're sharing with them?

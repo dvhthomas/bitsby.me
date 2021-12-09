@@ -17,3 +17,4 @@ $RECYCLE.BIN/
 .vscode
 notebooks/*.*
 !notebooks/*.ipynb.hugo_build.lock
+.hugo_build.lock
