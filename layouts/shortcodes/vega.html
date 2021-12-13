@@ -1,0 +1,6 @@
+{{ $spec := .Get "spec" }}
+<div id='{{ .Get "id" }}'></div>
+<script type="text/javascript">
+    var spec = {{ printf "%s%s/%s" .Site.BaseURL "charts" $spec }}
+    vegaEmbed('#{{ .Get "id" }}', spec).then(function(result) {}).catch(console.error);
+</script>

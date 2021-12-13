@@ -14,7 +14,7 @@ draft: false
 
 I came across this nice collection of leadership and learning links.
 
-{{< twitter 1378334295962443783 >}}
+{{< twitter user="shreyas" id="1378334295962443783" >}}
 
 The [Notable memos in tech](https://sriramk.com/memos.html) list has a a bunch of really good reads around high level corporate strategy.
 

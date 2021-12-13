@@ -15,7 +15,7 @@ I wrote [this post](https://woolpert.com/media/blogs/geospatial/woolpert-2021-bl
 
 ## Introduction
 
-{{<twitter 1348046036422385665>}}
+{{<twitter user="kelseyhightower" id="1348046036422385665">}}
 
 That [Tweet](https://twitter.com/kelseyhightower/status/1348046036422385665) by Kelsey Hightower is a tongue-in-cheek version of the buzzword heavy phrases we’ve all probably heard in relation to digital transformation. But practically speaking: What does it mean? And how much of it applies to your situation? And does it even make sense?!
 

@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en">
-  {{ partial "head.html" . }}
-  <body>
-      {{ partial "nav.html" . }}
+{{ partial "head.html" . }}
+{{ partial "script.html" . }}
+<body>
+    {{ partial "nav.html" . }}
     <div class="container">
-      <main id="main">
-       {{ block "main" . }}{{ end }}
-      </main>
+        <main id="main">
+            {{ block "main" . }}{{ end }}
+        </main>
     </div>
-    {{ partial "script.html" . }}
-  </body>
-  {{ partial "footer.html" . }}
+</body>
+{{ partial "footer.html" . }}
+
 </html>
