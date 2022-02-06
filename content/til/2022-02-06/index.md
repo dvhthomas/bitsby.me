@@ -7,7 +7,7 @@ series: []
 summary: Writing Markdown using VS Code
 mermaid: false
 mathjax: false
-draft: true
+draft: false
 ---
 
 I'm writing a lot of [Markdown](https://www.markdownguide.org/) recently, and most of that is in GitHub repositories.
