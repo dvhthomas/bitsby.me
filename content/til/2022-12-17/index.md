@@ -7,7 +7,7 @@ series: []
 summary: Learning a few bits about SQLite that are worth noting.
 mermaid: false
 mathjax: false
-draft: true
+draft: false
 ---
 
 ## Query the structure and schema
