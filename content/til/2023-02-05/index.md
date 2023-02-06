@@ -1,5 +1,5 @@
 ---
-title: 2023 02 05
+title: 2023-02-05
 date: 2023-02-05T19:10:33-07:00
 tags: [github, sponsorship, opensource, font]
 toc: true

@@ -1,5 +1,5 @@
 ---
-title: 2022 12 17
+title: 2022-12-17
 date: 2022-12-17T09:26:35-07:00
 tags: [sqlite]
 toc: true
