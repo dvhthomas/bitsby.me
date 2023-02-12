@@ -3,7 +3,7 @@ title: Taskfile.dev
 date: 2023-02-11T17:08:20-07:00
 tags: [automation, tasks]
 toc: true
-series: [Investments]
+series: []
 summary: Using `task` as a Make alternative for your automation tasks and wonderment.
 mermaid: false
 mathjax: false
