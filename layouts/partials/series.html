@@ -1,0 +1,21 @@
+{{ if .Params.series }}
+<div>
+    <p>This article is part of a series.</p>
+    <ul>
+        {{ range $num,$post := (index .Site.Taxonomies.series (index .Params.series 0 | urlize)).Pages.ByDate }}
+            {{ if eq $post.Permalink $.Page.Permalink }}
+                <li>
+                    Part {{ add $num 1 }}: This Article
+                </li>
+            {{ else }}
+                <li>
+                    <a href="{{$post.Permalink}}">
+                        Part {{ add $num 1 }}: {{ $post.Params.title}}
+                    </a>
+                </li>
+            {{end}}
+        {{end}}
+    </ul>
+</div>
+{{end}}
+
