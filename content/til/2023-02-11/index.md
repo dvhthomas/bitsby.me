@@ -22,8 +22,7 @@ I was dreading the usual song-and-dance around getting that file using various a
 ### Where is the file?
 
 Step one is to consult the GitHub API to figure out the correct name of the file.
-Because the API refers to things differently that the path you see in the URL for repo browsing:
-
+Because the API refers to things differently that the path you see in the URL for repo browsing.
 Here's what I ended up with:
 
 ```
@@ -36,8 +35,8 @@ https://api.github.com/repos/github/thehub/contents/docs/_data/hubbers.yml
    That's **my** organization, not your favorite Git hosting website!
 1. `thehub` -- that's the name of our internal repo where we keep our intranet The Hub.
    Replace with _your_ repository name.
-1. `contents/docs` -- use that. It's a consistent part of the API name for your files in your repo.
-1. `_data/hubbers.yml` -- that is the directory/filename of something in **my** repo.
+1. `contents` -- use that. It's a consistent part of the API name for your files in your repo.
+1. `docs/_data/hubbers.yml` -- that is the directory/filename of something in **my** repo.
    So replace that with whatever it is you want to download.
 
 That is all probably superbly well documented somewhere.
