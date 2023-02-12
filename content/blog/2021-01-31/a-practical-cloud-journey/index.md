@@ -8,6 +8,8 @@ summary: |-
     competence), and the importance of context.
 toc: true
 draft: false
+series:
+    - Woolpert Cloud Journey
 ---
 
 

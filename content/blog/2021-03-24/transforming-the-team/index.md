@@ -3,7 +3,8 @@ title: Transforming the Team on Your Practical Cloud Journey
 date: 2021-03-24T14:08:52-06:00
 tags: [leadership, cloud, learning]
 toc: true
-series: [cloud journey]
+series:
+    - Woolpert Cloud Journey
 summary: |-
   Reposting a [blog](https://woolpert.com/media/blogs/geospatial/transforming-the-team-on-your-practical-cloud-journey/) I wrote for Woolpert about digital
   transformation and the necessary culture, learning, and

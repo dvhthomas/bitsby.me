@@ -41,13 +41,19 @@ ignoreErrors = ["error-remote-getjson"]
         url = "/tags/"
         weight = 4
     [[menu.main]]
+        name = "Series"
+        pre = "book"
+        url = "/series/"
+        weight = 5
+    [[menu.main]]
         name = "About"
         pre = "user"
         url = "/about/"
-        weight = 5
+        weight = 6
 
 [taxonomies]
   tag = "tags"
+  series = "series"
 
 [permalinks]
   blog = "/:year/:month/:title"

@@ -3,7 +3,8 @@ title: 2023-02-11
 date: 2023-02-11T18:28:32-07:00
 tags: [authentication, github, api, curl]
 toc: true
-series: []
+series:
+    - SQLite and Go
 summary: Using the GitHub CLI to make authenticated and authorized download from a private repo.
 mermaid: false
 mathjax: false

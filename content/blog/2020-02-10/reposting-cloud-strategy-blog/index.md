@@ -5,6 +5,8 @@ summary: |
     I focus mostly on the _Decide_ phase, since that's most interesting to me personally, and I think it's also the part where a lack of recognition of an appropriate mindset gets people in a pickle.
 date: 2020-02-10T20:01:00-07:00
 draft: false
+series:
+    - Woolpert Cloud Journey
 tags: [leadership, strategy]
 ---
 

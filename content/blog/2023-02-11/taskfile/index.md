@@ -3,7 +3,8 @@ title: Taskfile.dev
 date: 2023-02-11T17:08:20-07:00
 tags: [automation, tasks]
 toc: true
-series: []
+series:
+    - SQLite and Go
 summary: Using `task` as a Make alternative for your automation tasks and wonderment.
 mermaid: false
 mathjax: false
@@ -46,7 +47,7 @@ I'm running a Mac right now, so the [canonical way to install](https://taskfile.
 brew install go-task/tap/go-task
 ```
 
-But since I'm already running Go ([using `asdf`]()) I found the Go-based approach simpler:
+But since I'm already running Go ([using `asdf`]({{< ref "blog/2021-03-07/asdf-for-runtime-management/index.md" >}})) I found the Go-based approach simpler:
 
 ```sh
 go install github.com/go-task/task/v3/cmd/task@latest
