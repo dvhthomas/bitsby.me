@@ -1,0 +1,74 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  # Using the API version of the file URL so that we can deal with
+  # authentication nicely using the `gh` CLI.
+  EMPLOYEE_SOURCE: https://api.github.com/repos/github/thehub/contents/docs/_data/hubbers.yml
+  EMPLOYEE_DATA: tmp/hubbers.yml
+  EMP_CSV: tmp/employees.csv
+  INVEST_DATA: investments.yml
+  INV_CSV: tmp/investments.csv
+  INV_STAFF_CSV: tmp/staff-investments.csv
+  INV_TAGS_CSV: tmp/initiative-tags.csv
+  TAGS_CSV: tmp/tags.csv
+  TMP_DIR: tmp
+  DB: db.sqlite3
+
+tasks:
+  fetch-data:
+    desc: Fetches employee / team data from a git repo.
+    deps: [tmp-dir]
+    cmds:
+      # https://stackoverflow.com/a/65452512
+      - curl $(gh api {{.EMPLOYEE_SOURCE}} --jq .download_url) --output {{.EMPLOYEE_DATA}}
+    status:
+      - test -f {{.EMPLOYEE_DATA}}
+
+  parse:
+    desc: Parse existing YAML data files into CSVs that can be imported to SQLite
+    deps: [tmp-dir]
+    cmds:
+      - task: fetch-data
+        # This flattens the YAML and correctly orders the subset of fields ready for SQL import
+      - yq '.[] | [key, .name, .email, .title, .employment_type, .cost_center, .manager] | @csv' {{.EMPLOYEE_DATA}} > {{.EMP_CSV}}
+        # This gets basic info on each investment
+      - yq '.[] | [key, .name, .link, .description] | @csv' {{.INVEST_DATA}} > {{.INV_CSV}}
+        # This extracts the staff-level investment percentages for each investment
+      - yq '.[].investments[] | [parent() | parent() | key,keys,.[]] | flatten | @csv' {{.INVEST_DATA}} > {{.INV_STAFF_CSV}}
+      - yq '.[].tags[]' {{.INVEST_DATA}} | uniq > {{.TAGS_CSV}}
+        # Grab the tags for each investment for many-to-many lookup
+      - yq e '.[].tags[] | [parent() | parent() | key,.] | @csv' {{.INVEST_DATA}} > {{.INV_TAGS_CSV}}
+
+  db:
+    desc: Converts the YAML employee file to SQLite
+    cmds:
+      - rm -f {{.DB}}
+      - task: parse
+      - sqlite3 {{.DB}} < data/schema.sql
+      - sqlite3 {{.DB}} < data/import.sql
+  clean:
+    desc: Clean up all generated files including databases
+    cmds:
+      - rm -rf {{.TMP_DIR}} 
+      - rm -f {{.DB}}
+      - rm -f invest
+
+  test:
+    desc: Runs Go tests. Use `--` followed by any args to pass, e.g., `-- -v`
+    cmds:
+      - go clean ./...
+      - go test ./... {{ .CLI_ARGS }}
+
+  build:
+    desc: Build the binary
+    cmds:
+      - go build -o invest
+
+# Internal tasks
+
+  tmp-dir:
+    internal: true
+    cmds:
+      - mkdir -p {{.TMP_DIR}}
