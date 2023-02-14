@@ -8,7 +8,7 @@ series:
 summary: Using Go and SQLite to munge YAML data for fun and profit...or for free.
 mermaid: true
 mathjax: false
-draft: true
+draft: false
 ---
 
 ## A holiday project
