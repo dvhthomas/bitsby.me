@@ -18,17 +18,22 @@ See the the first article in this series for the setup.
 
 The basic premise in my Investment Tracker is that a Person can invest some percentage of their time, between 0% and 100%, in an Initiative.
 An Initiative is a project or a program or any other bundle of work that a number of people, or parts of an organization, are working on ("investment their time in").
-The is tracked as a Staff Investment of effort.
+The is tracked as a staff Investment of effort.
 And to keep things organized, Investments can have tags like `enterprise` and `keep-the-lights-on`.
 
 {{<mermaid>}}
 erDiagram
-    Person ||--o{ StaffInvestments : makes
-    StaffInvestments ||--|| Initiative : invests-in
+    Person ||--o{ Investment : makes
+    Investment ||--|| Initiative : invests-in
     Initiative }|--|{ Tags : has
 {{</mermaid>}}
 
-The actual schema in SQLite ended up like this for the raw data, meaning the data that comes from YAML.
+As I mentioned in [the opening article of the series]({{< ref "/blog/2023-02-01/sqlite-and-go-app/index.md#data-shapes" >}}), this data all lives in a couple of YAML files.
+Before I transformed the data from YAML into SQLite I needed to create the schema.
+Here's what I eventually came up with after trying a few different shapes.
+Remember again, this is the basic data I was going to pull in from YAML.
+There's more to SQL to come before I can answer my questions around this hierarchical data.
+
 ```sql
 CREATE TABLE people (
   id            TEXT  PRIMARY KEY,
