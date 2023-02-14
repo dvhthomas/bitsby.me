@@ -39,13 +39,14 @@ The DNS configuration is in [Google Domains](https://domains.google.com/registra
 
 ## Preview
 
-To start a dev server which also published Draft content:
+To start a dev server which also published Draft content just run `task`.
+That starts the `default` task, the dev server:
 
 ```shell
-./serve
+task
 ```
 
-Look at the draft [Tips](http://localhost:1313) post to see examples of how you can use various elements like diagrams, code, and tweets.
+Look at the draft [Tips](http://localhost:1313/2020/02/tips/) post to see examples of how you can use various elements like diagrams, code, and tweets.
 
 If you want to publish and put all the non-draft content into the `public/` directory just type `hugo` on its own.
 
