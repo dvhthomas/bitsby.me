@@ -2,20 +2,31 @@
 
 [Bits By Me](https://bitsby.me) uses the blog uses the hugo static site generator. Publishing articles is easy; working with Jupyter notebooks that become embedded GitHub gists is slightly more involved.
 
+## Prerequisites
+
+- [Go](https://go.dev) - [I use `asdf`](https://bitsby.me/2021/03/asdf-for-runtime-management/) so `asdf install golang latest` works for me.
+- [Hugo](https://gohugo.io/installation/) - `brew install hugo`
+- [Task](https://taskfile.dev/installation/) - `go install github.com/go-task/task/v3/cmd/task@latest` && `asdf reshim`.
+
 ## Author and publish
 
-```bash
-# Write a new blog post
-# note the dashes...
-./newblog some-factoid 
+Write a new blog post by providing a `TITLE` and calling the `task blog`:
+
+```sh
+TITLE="some-factoid" task blog
 ...write write write...
 git add .
 git commit -m "my cool post"
 git push origin master
 ```
 
-You do the same thing for Today I Learned posts.
-Except you run `./newtil` and you don't need to provide a title.
+You do the roughly the same thing for Today I Learned posts but you don't provide a `TITLE`.
+
+```sh
+task today-i-learned
+OR
+task til
+```
 
 Each post is put into a folder like `til/1971-01-01/` or `blog/1971-01-01/awesome-title` with an `index.md` file. This gives you a spot to drop post-specific content next to the post itself. For example, if you want an image for a post you can drop it in that folder and reference it in the post thus:
 

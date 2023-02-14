@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  DATE:
+   sh: date "+%Y-%m-%d"
+
+tasks:
+  default:
+    desc: Start a local dev server
+    cmds:
+      - hugo server --buildDrafts --noHTTPCache
+    interactive: true
+  blog:
+    desc: Create a new blog post with a title, TITLE="my-post" task blog
+    cmds:
+     - hugo new blog/{{.DATE}}/$TITLE/index.md
+    env:
+      TITLE: ""
+  today-i-learned:
+    desc: Create a new Today I Learned post
+    aliases: [til]
+    cmds:
+     - hugo new til/{{.DATE}}/index.md
