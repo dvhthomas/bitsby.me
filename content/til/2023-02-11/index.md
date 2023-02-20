@@ -1,5 +1,5 @@
 ---
-title: 2023-02-11
+title: GitHub CLI
 date: 2023-02-11T18:28:32-07:00
 tags: [authentication, github, api, curl]
 toc: true

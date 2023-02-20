@@ -1,5 +1,5 @@
 ---
-title: 2021-12-03
+title: CAGR
 date: 2021-12-03T08:24:22-07:00
 tags: [finance]
 toc: true
@@ -9,7 +9,8 @@ mermaid: false
 mathjax: true
 draft: true
 ---
-Compound annual growth rate (CAGR)
+Compound annual growth rate (CAGR).
+But really a shameless excuse to try `$Mathtex$` rendering in the browser.
 
 `$$
 \Large CAGR = \left( V_{final} \over V_{begin} \right)^{1/t} - 1
