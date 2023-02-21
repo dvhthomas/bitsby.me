@@ -1,5 +1,5 @@
 ---
-title: 2021-11-11
+title: Python, SQL, and data eng
 date: 2021-11-11T15:20:28-05:00
 tags: [replit, python, data engineering, sql, sqlite]
 toc: true
