@@ -67,3 +67,6 @@ ignoreErrors = ["error-remote-getjson"]
     lineNumbersInTable = true
     noClasses = true
     style = "github"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
