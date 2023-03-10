@@ -19,7 +19,11 @@ tasks:
     env:
       TITLE: ""
   today-i-learned:
-    desc: Create a new Today I Learned post
+    desc: Create a new Today I Learned post, TITLE="the title" task til
     aliases: [til]
     cmds:
      - hugo new til/{{.DATE}}/index.md
+     - 'sed -i.bak "2s/title.*/title: $TITLE/" content/til/{{.DATE}}/index.md'
+     - rm content/til/{{.DATE}}/index.md.bak
+    env:
+      TITLE: ""
