@@ -8,7 +8,7 @@ ignoreErrors = ["error-remote-getjson"]
 [params]
     homeText = "tech cloud geo learning"
     dateFormat = "January 2, 2006"
-    description = "The personal website, blog and dev diary of Dylan Thomas"
+    description = "The personal website and blog of Dylan Thomas"
 
 
 [sitemap]
