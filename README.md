@@ -4,6 +4,10 @@
 
 ## Prerequisites
 
+The easiest way to start is to [use a GitHub Codespace](https://codespaces.new/dvhthomas/blog?quickstart=1) or run locally as a devcontainer in VS Code (see [`devcontainer.json`](./.devcontainer/devcontainer.json) for details).
+
+If you must use locally then you need to install:
+
 - [Go](https://go.dev) - [I use `asdf`](https://bitsby.me/2021/03/asdf-for-runtime-management/) so `asdf install golang latest` works for me.
 - [Hugo](https://gohugo.io/installation/) - `brew install hugo`
 - [Task](https://taskfile.dev/installation/) - `go install github.com/go-task/task/v3/cmd/task@latest` && `asdf reshim`.
@@ -32,19 +36,18 @@ Each post is put into a folder like `til/1971-01-01/` or `blog/1971-01-01/awesom
 
 ## Hosting
 
-The blog itself is hosting on [Render.com](https://render.com).
-Log in using my personal Google Account will give access to the [Personal Blog dashboard](https://dashboard.render.com/static/srv-c0bm3gdua9vt7i8g0q80/settings).
-
-The DNS configuration is in [Google Domains](https://domains.google.com/registrar/bitsby.me/dns), again accessible using my personal Google account.
+The blog itself is hosting on GitHub Pages.
+The DNS configuration is in [Squarespace Domains](https://domains.squarespace.com) accessible using my personal Google account.
 
 ## Preview
 
-To start a dev server which also published Draft content just run `task`.
-That starts the `default` task, the dev server:
+* If you're running in Codespaces or a Devcontainer you should already have a preview running on port 1313.
+* If you're doing things manually, start a dev server by running `task`.
+  That starts the `default` task, the dev server:
 
-```shell
-task
-```
+  ```shell
+  task
+  ```
 
 Look at the draft [Tips](http://localhost:1313/2020/02/tips/) post to see examples of how you can use various elements like diagrams, code, and tweets.
 
