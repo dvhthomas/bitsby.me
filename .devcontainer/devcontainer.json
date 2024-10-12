@@ -9,16 +9,16 @@
       "ghcr.io/devcontainers/features/hugo:1": {
         "extended": "true"
       },
-      "ghcr.io/devcontainers/features/github-cli:1": {}
+      "ghcr.io/devcontainers/features/github-cli:1": {},
+      "ghcr.io/eitsupi/devcontainer-features/go-task:1": {}
     },
-    "postCreateCommand": "cd build && hugo server -D --contentDir ../docs --renderToMemory",
+    "postCreateCommand": "hugo server -D --renderToMemory",
     "forwardPorts": [1313],
     "customizations": {
       "vscode": {
         // Inbuilt extensions, these are used for the github/github devcontainer too
         "extensions": [
           "GitHub.codespaces",
-          "GitHub.copilot@prerelease",
           "mutantdino.resourcemonitor",
           "jasonnutter.vscode-codeowners"
         ]
